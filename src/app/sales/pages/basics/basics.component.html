@@ -1,0 +1,97 @@
+<div class="text-layout">
+    <h1>Basic Pipes</h1>
+    <p>
+        Angular Pipes, built in the Common Module
+    </p>
+</div>
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card 
+            header="Uppercase"
+            [subheader]="nombreLower">
+            After pipe: {{ nombreLower | uppercase}}
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card 
+            header="lowercase"
+            [subheader]="nombreUpper">
+            After pipe: {{ nombreUpper | lowercase }}
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card 
+            header="Titlecase"
+            [subheader]="nombreComplete">
+            After pipe: {{ nombreComplete | titlecase }}
+        </p-card>
+    </div>
+</div>
+<!--  -->
+<div class="text-layout">
+    <h1>Date Pipes</h1>
+    <p>
+        Angular Pipes to format a date according to locale rules
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li>
+                    Date
+                </li>
+                <li>
+                    Date | date
+                </li>
+                <li>
+                    Date | date:'short'
+                </li>
+                <li>
+                    Date | date:'long'
+                </li>
+                <li>
+                    Date | date:'yyyy MMM dd ZZZZ'
+                </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>aDate | date:'long':'GMT-6'</li>
+                <li>aDate | date:'long':'GMT-4'</li>
+                <li>aDate | date:'long':'':'en'</li>
+                <li>aDate | date:'long':'':'fr'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li>
+                    {{aDate}}
+                </li>
+                <li>
+                    {{aDate | date}}
+                </li>
+                <li>
+                    {{aDate | date:'short'}}
+                </li>
+                <li>
+                    {{aDate | date:'long'}}
+                </li>
+                <li>
+                    {{aDate | date:'yyyy MMM dd, ZZZZ'}}
+                </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>{{aDate | date:'long':'GMT-6'}}</li>
+                <li>{{aDate | date:'long':'GMT-4'}}</li>
+                <li>{{aDate | date:'long':'':'en'}}</li>
+                <li>{{aDate | date:'long':'':'fr'}}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
