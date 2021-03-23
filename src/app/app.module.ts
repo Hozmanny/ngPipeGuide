@@ -5,7 +5,7 @@ import { AppRouterModule } from './app-router.module';
 import { AppComponent } from './app.component';
 import { SalesModule } from './sales/sales.module';
 import { SharedModule } from './shared/shared.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Change the locale
 import localeEs from '@angular/common/locales/es-419';
 import localeFr from '@angular/common/locales/fr';
@@ -19,9 +19,10 @@ registerLocaleData(localeFr);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRouterModule,
     SharedModule,
-    SalesModule
+    SalesModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-419' }
