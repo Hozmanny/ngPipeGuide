@@ -5,11 +5,14 @@ import { NoCommonComponent } from './pages/no-common/no-common.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { MayusculasPipe } from './pipes/mayuscula.pipe';
+import { realPowerPipe } from './pipes/realPower.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 
 @NgModule({
-  declarations: [NumbersComponent, NoCommonComponent, BasicsComponent, SortComponent],
+  declarations: [NumbersComponent, NoCommonComponent, BasicsComponent, SortComponent, MayusculasPipe, realPowerPipe, SortPipe],
   imports: [
     CommonModule, PrimeNgModule
   ],
